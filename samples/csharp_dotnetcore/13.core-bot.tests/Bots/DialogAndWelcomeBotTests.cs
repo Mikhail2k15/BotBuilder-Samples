@@ -33,11 +33,11 @@ namespace CoreBot.Tests.Bots
                 Type = ActivityTypes.ConversationUpdate,
                 MembersAdded = new List<ChannelAccount>
                 {
-                    new ChannelAccount { Id = "theUser" },
+                     new ChannelAccount { Id = "user" },
                 },
-                Recipient = new ChannelAccount { Id = "theBot" },
+                Recipient = new ChannelAccount { Id = "msteams" },
             };
-            var testAdapter = new TestAdapter(Channels.Test);
+            var testAdapter = new TestAdapter(Channels.Msteams);
 
             // Act
             // Send the conversation update activity to the bot.
